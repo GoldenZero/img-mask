@@ -1,0 +1,38 @@
+<link rel="import" href="../../polymer/polymer-element.html">
+<link rel="import" href="../img-mask.html">
+
+<dom-module id="demo-element">
+    <template>
+        <h3>Statically-configured img-mask</h3>
+        <img-mask shape="square" src="http://placehold.it/320/33b779/ffffff/"></img-mask>
+        <img-mask shape="triangle" src="http://placehold.it/320/e7da66/ffffff/"></img-mask>
+        <img-mask shape="circle" src="http://placehold.it/320/396ad4/ffffff/"></img-mask>
+        <img-mask shape="rhombus" src="http://placehold.it/320/afaec0/ffffff/"></img-mask>
+        <img-mask shape="parallelogram" src="http://placehold.it/320/d899c0/ffffff/"></img-mask>
+        <img-mask shape="plus" src="http://placehold.it/320/123456/ffffff/"></img-mask>
+        <img-mask shape="star" src="http://placehold.it/320/ffbfa0/ffffff/"></img-mask>
+        <img-mask shape="squircle" src="http://placehold.it/320/f78536/ffffff/"></img-mask>
+        <img-mask shape="octagon" src="http://placehold.it/320/98b4a6/ffffff/"></img-mask>
+        <img-mask shape="ring" src="http://placehold.it/320/8dc6ff/ffffff/"></img-mask>
+        <img-mask shape="hexagon" src="adrianne-ho.gif" href="#"
+                  title="Image with a short description" desc="Immage with a looooong description"></img-mask>
+    </template>
+    <script>
+        class DemoElement extends Polymer.Element {
+            static get is() {
+                return "demo-element"
+            }
+
+            _message(fav) {
+                if (fav) {
+                    return "You really like me!";
+                }
+                else {
+                    return "Do you like me?";
+                }
+            }
+        }
+
+        customElements.define(DemoElement.is, DemoElement);
+    </script>
+</dom-module>
